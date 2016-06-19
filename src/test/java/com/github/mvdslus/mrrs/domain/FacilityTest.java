@@ -4,10 +4,9 @@
 package com.github.mvdslus.mrrs.domain;
 
 import static org.junit.Assert.*;
-
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
+
+import com.github.mvdslus.mrrs.Facility;
 
 /**
  * @author mvds
@@ -15,23 +14,20 @@ import org.junit.Test;
  */
 public class FacilityTest {
 
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@Before
-	public void setUp() throws Exception {
-	}
 
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@After
-	public void tearDown() throws Exception {
-	}
+    @Test
+    public void createComputerWithLargeScreen() throws Exception{
+        Facility facility = new Facility("Computer with large screen");
+        
+        assertEquals("Computer with large screen", facility.getName());
+    }
 
-	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
+
+    @Test
+    public void createWhiteborad() throws Exception {
+    	Facility facility = new Facility("Whiteboard");
+        
+        assertEquals("Whiteboard", facility.getName());
+    }
 
 }
