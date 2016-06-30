@@ -11,22 +11,19 @@
 #Background: List of steps run before each of the scenarios
 #""" (Doc Strings)
 #| (Data Tables)
-#@ (Tags/Labels):To group Scenarios 
+#@ (Tags/Labels):To group Scenarios
 #<> (placeholder)
 #""
 ## (Comments)
-
 #Sample Feature Definition Template
 @tag
 Feature: user can find the existens of a room
-	users search for room by location or a minimum capicity. The system shows them if these rooms exist.
+  users search for room by location or a minimum capicity. The system shows them if these rooms exist.
 
-@tag1
-Scenario: User can find a room an exisiting location
-Given the room with location "1.22" exists
-When user serarches for room with location "1.22" 
-Then room is displayed
-    | name       | location | capacity | facility   |
-    | " Berlin"  |  5       | 10      	|"beamer" |
-
-
+  @tag1
+  Scenario: User can find a room an exisiting location
+    Given the room with location "1.22" exists
+    When user serarches for room with location "1.22"
+    Then room is displayed
+      | name      | location | capacity | facility |
+      | " Berlin" |        5 |       10 | "beamer" |
